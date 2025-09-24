@@ -124,7 +124,7 @@ export default function AboutPage() {
 
             <div className="card-enhanced rounded-lg p-8 mb-12">
               <blockquote className="text-xl font-medium text-center text-primary mb-8">
-                "{differentiation.quote}"
+                &ldquo;{differentiation.quote}&rdquo;
               </blockquote>
             </div>
 
