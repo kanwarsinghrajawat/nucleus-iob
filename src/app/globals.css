@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Typography System */
+@layer base {
+  :root {
+    --font-sans: var(--font-inter);
+    --font-mono: var(--font-jetbrains-mono);
+    --font-display: var(--font-space-grotesk);
+    --font-heading: var(--font-outfit);
+  }
+}
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+    /* Light theme - keeping minimal for contrast */
+    --background: oklch(0.98 0 0);
+    --foreground: oklch(0.15 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.15 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.15 0 0);
+    --primary: oklch(0.2 0 0);
+    --primary-foreground: oklch(0.98 0 0);
+    --secondary: oklch(0.95 0 0);
+    --secondary-foreground: oklch(0.2 0 0);
+    --muted: oklch(0.95 0 0);
+    --muted-foreground: oklch(0.5 0 0);
+    --accent: oklch(0.95 0 0);
+    --accent-foreground: oklch(0.2 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.9 0 0);
+    --input: oklch(0.9 0 0);
+    --ring: oklch(0.7 0 0);
+    --chart-1: oklch(0.646 0.222 41.116);
+    --chart-2: oklch(0.6 0.118 184.704);
+    --chart-3: oklch(0.398 0.07 227.392);
+    --chart-4: oklch(0.828 0.189 84.429);
+    --chart-5: oklch(0.769 0.188 70.08);
+    --sidebar: oklch(0.98 0 0);
+    --sidebar-foreground: oklch(0.15 0 0);
+    --sidebar-primary: oklch(0.2 0 0);
+    --sidebar-primary-foreground: oklch(0.98 0 0);
+    --sidebar-accent: oklch(0.95 0 0);
+    --sidebar-accent-foreground: oklch(0.2 0 0);
+    --sidebar-border: oklch(0.9 0 0);
+    --sidebar-ring: oklch(0.7 0 0);
+  }
+
+  .dark {
+    /* Sophisticated dark theme - elegant and refined */
+    --background: oklch(0.06 0 0); /* Rich black */
+    --foreground: oklch(0.92 0 0); /* Soft white */
+    --card: oklch(0.09 0 0); /* Subtle card background */
+    --card-foreground: oklch(0.92 0 0);
+    --popover: oklch(0.09 0 0);
+    --popover-foreground: oklch(0.92 0 0);
+    --primary: oklch(0.75 0.08 250); /* Refined blue */
+    --primary-foreground: oklch(0.06 0 0);
+    --secondary: oklch(0.15 0 0); /* Elegant gray */
+    --secondary-foreground: oklch(0.92 0 0);
+    --muted: oklch(0.15 0 0);
+    --muted-foreground: oklch(0.65 0 0); /* Refined muted text */
+    --accent: oklch(0.15 0 0);
+    --accent-foreground: oklch(0.92 0 0);
+    --destructive: oklch(0.65 0.15 20);
+    --border: oklch(0.2 0 0); /* Subtle elegant border */
+    --input: oklch(0.15 0 0);
+    --ring: oklch(0.75 0.08 250); /* Refined blue ring */
+    --chart-1: oklch(0.7 0.1 250); /* Refined blue */
+    --chart-2: oklch(0.7 0.1 280); /* Refined purple */
+    --chart-3: oklch(0.7 0.1 200); /* Refined cyan */
+    --chart-4: oklch(0.7 0.1 320); /* Refined magenta */
+    --chart-5: oklch(0.7 0.1 180); /* Refined teal */
+    --sidebar: oklch(0.09 0 0);
+    --sidebar-foreground: oklch(0.92 0 0);
+    --sidebar-primary: oklch(0.75 0.08 250);
+    --sidebar-primary-foreground: oklch(0.06 0 0);
+    --sidebar-accent: oklch(0.15 0 0);
+    --sidebar-accent-foreground: oklch(0.92 0 0);
+    --sidebar-border: oklch(0.2 0 0);
+    --sidebar-ring: oklch(0.75 0.08 250);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family:
+      var(--font-inter),
+      system-ui,
+      -apple-system,
+      sans-serif;
+  }
+
+  /* Elegant Typography System */
+  .font-display {
+    font-family:
+      var(--font-inter),
+      system-ui,
+      -apple-system,
+      sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .font-heading {
+    font-family:
+      var(--font-inter),
+      system-ui,
+      -apple-system,
+      sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+  }
+
+  .font-mono {
+    font-family: var(--font-jetbrains-mono), "Courier New", monospace;
+  }
+
+  /* Refined text styles */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family:
+      var(--font-inter),
+      system-ui,
+      -apple-system,
+      sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  .text-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.8 0.1 250) 0%,
+      oklch(0.7 0.1 280) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Elegant spacing and sizing */
+  .text-elegant {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+  }
+
+  .heading-elegant {
+    font-weight: 500;
+    letter-spacing: -0.008em;
+    line-height: 1.4;
+  }
+
+  /* Elegant dark theme enhancements */
+  .dark {
+    /* Sophisticated gradients */
+    .gradient-bg {
+      background: linear-gradient(
+        135deg,
+        oklch(0.08 0.02 250) 0%,
+        oklch(0.06 0.02 280) 100%
+      );
+    }
+
+    /* Subtle elegant effects */
+    .glow-blue {
+      box-shadow: 0 0 30px oklch(0.4 0.1 250 / 0.15);
+    }
+
+    .glow-purple {
+      box-shadow: 0 0 30px oklch(0.4 0.1 280 / 0.15);
+    }
+
+    /* Refined card styling */
+    .card-enhanced {
+      background: oklch(0.09 0 0);
+      border: 1px solid oklch(0.2 0 0);
+      backdrop-filter: blur(8px);
+    }
+
+    /* Elegant glass effect */
+    .frosted-glass {
+      background: oklch(0.09 0 0 / 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid oklch(0.2 0 0 / 0.2);
+    }
+
+    /* Sophisticated button styling */
+    .btn-primary-enhanced {
+      background: linear-gradient(
+        135deg,
+        oklch(0.75 0.08 250) 0%,
+        oklch(0.7 0.08 280) 100%
+      );
+      box-shadow: 0 2px 8px oklch(0.3 0.1 250 / 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary-enhanced:hover {
+      background: linear-gradient(
+        135deg,
+        oklch(0.8 0.08 250) 0%,
+        oklch(0.75 0.08 280) 100%
+      );
+      box-shadow: 0 4px 12px oklch(0.4 0.1 250 / 0.3);
+      transform: translateY(-1px);
+    }
+  }
+}
