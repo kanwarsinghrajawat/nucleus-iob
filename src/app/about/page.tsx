@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { aboutContent } from "@/content/about";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "About - Nucleus IOB",
@@ -25,21 +26,23 @@ export default function AboutPage() {
   } = aboutContent;
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-black">
+      <Header />
+
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 gradient-bg">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="container mx-auto text-center">
           <div className="mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-8 border border-primary/20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-800 text-white text-sm font-medium mb-8 border border-gray-600">
               <span className="text-lg">{hero.tokenBadge.icon}</span>
               {hero.tokenBadge.text}
             </div>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display tracking-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display tracking-tight text-white">
             {hero.title}{" "}
-            <span className="text-gradient">{hero.titleHighlight}</span>
+            <span className="text-white">{hero.titleHighlight}</span>
           </h1>
-          <p className="mt-8 text-elegant text-muted-foreground max-w-3xl mx-auto">
+          <p className="mt-8 text-gray-300 max-w-3xl mx-auto">
             {hero.description}
           </p>
         </div>
